@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scan.page.scss'],
 })
 export class ScanPage implements OnInit {
-
+  isModalOpen= false;
   constructor() { }
 
   ngOnInit() {
   }
-
+  setOpen(isOpen:boolean) {
+    this.isModalOpen = isOpen;
+  }
 }

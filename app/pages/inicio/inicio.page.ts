@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { RegistroserviceService, Usuario } from 'src/services/registroservice.service';
+
 
 interface Componente{
   icon: string;
@@ -22,7 +24,9 @@ export class InicioPage implements OnInit {
     }
   ];
 
-  constructor(private menu: MenuController) { }
+  public username = this.registroService.getUser();
+
+  constructor(private menu: MenuController, private registroService: RegistroserviceService) { }
 
   ngOnInit() {
   }

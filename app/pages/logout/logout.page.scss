@@ -1,0 +1,28 @@
+.ibutscan {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --background: #9f26a8;
+    --border-radius: 10px;
+    margin: 20px;
+    display: grid;
+    justify-content: center;
+    --padding-start: 5.3rem;
+    --padding-end: 5.3rem;
+    color: white;
+}
+
+.ibutscan2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --background: #b9b8b8;
+    --border-radius: 10px;
+    margin: 20px;
+    display: grid;
+    justify-content: center;
+    --padding-start: 7rem;
+    --padding-end: 7rem;
+    color: black;
+}
+
+.p-content{
+    font-weight: 700;
+    text-align: center;
+  }

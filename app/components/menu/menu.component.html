@@ -2,9 +2,12 @@
     <ion-header>
       <ion-toolbar class="ion-toolbar-color">
         <ion-title class="text-menu">Menu Principal</ion-title>
+        <ion-buttons slot="end">
+          <ion-icon (click)="openMenu()" name="list" class="ionic-icon" color="light"></ion-icon>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
-    
+
     <ion-content class="ion-menu-content">
       <ion-list>
         <ion-item *ngFor="let r of lista_menu" [routerLink]="r.ruta" class="ion-item-menu">
@@ -13,5 +16,15 @@
         </ion-item>
       </ion-list>
     </ion-content>
+    <!--FOOTER-->
+    <ion-footer>
+      <ion-toolbar>
+        <ion-list>
+          <ion-item *ngFor="let r of lista_menu_footer" [routerLink]="r.ruta">
+            <ion-icon [name]="r.icon" class="ionic-icon-menu"></ion-icon>
+            <ion-label id="label-text-menu"> {{r.name}} </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-toolbar>
+    </ion-footer>
   </ion-menu>
-  

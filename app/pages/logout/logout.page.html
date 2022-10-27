@@ -1,0 +1,20 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar id="ionic-fondo-toolbar">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="fondo-content" [fullscreen]="true">
+  <ion-row>
+    <ion-col text-center>
+      <p class="p-content">
+        ¿Estás seguro que deseas cerrar la sesión actual?
+      </p>
+      <ion-button fill="clear" class="ibutscan2" routerLink="/" >
+        Volver
+      </ion-button>
+      <ion-button (click)="cerrarSesion()" fill="clear" class="ibutscan" routerLink="/login" >
+        Cerrar Sesion
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

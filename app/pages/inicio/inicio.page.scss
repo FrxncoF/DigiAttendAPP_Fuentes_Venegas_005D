@@ -14,16 +14,19 @@
 .ionic-icon {
     padding-right: 8px;
     font-size: 23px;
-    color: primary;
+    color: light;
 }
 
-
-.text-welcome {
-    font-family: 'Franklin Gothic Medium';
+#text-welcome {
+    color: black;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
     text-align: center;
 }
 
-#ionic-fondo-toolbar {
-    color: primary;
+#text-user {
+    color: mediumslateblue;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
