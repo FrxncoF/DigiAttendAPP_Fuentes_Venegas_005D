@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar id="ionic-fondo-toolbar">
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="fondo-content" [fullscreen]="true">
+  <h1> Feriados Nacionales Chile </h1>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let feriado of feriados" size="12">
+        <ion-card class="ioncard">
+          <img src="/assets/img/vector4.png" alt="vector_purple">
+          <ion-card-header>
+            <ion-card-subtitle>{{feriado.date.data}}</ion-card-subtitle>
+            <ion-card-title>{{feriado.title}}</ion-card-title>
+          </ion-card-header>
+          <p class="fecha">Fecha: {{feriado.date}}  <span *ngIf="feriado.inalienable; else troste">👍</span> <ng-template #troste> <span>👎</span> </ng-template> </p>
+          <p>Tipo de Feriado: {{feriado.type}}</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
