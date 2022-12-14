@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 @Component({
   selector: 'app-scan',
   templateUrl: './scan.page.html',
@@ -7,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScanPage implements OnInit {
   isModalOpen= false;
-  constructor() { }
+  constructor(private barcodeScanner:BarcodeScanner) { }
+
+  scan(){
+    this.barcodeScanner.scan().then((barcodeData)=>{
+      alert("barcode data = "+barcodeData.text);
+    },(err)=>{
+      alert(JSON.stringify(err));
+    })
+  }
 
   ngOnInit() {
+    
   }
   setOpen(isOpen:boolean) {
     this.isModalOpen = isOpen;
   }
+  
 }
